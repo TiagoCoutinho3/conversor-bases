@@ -8,36 +8,32 @@
   </head>
   <body>
     <div class="container">
-      
       <header>
         <h1>Conversor de Bases Numéricas</h1>
       </header>
-      
+
       <div class="input-group">
         <label for="valor-entrada">DIGITE UM VALOR:</label>
         <input type="text" id="valor-entrada" autocomplete="off" />
       </div>
 
-
       <div class="control-group">
-        
         <label for="base-entrada">BASE DE ENTRADA:</label>
-      <select name="base-entrada" id="base-entrada">
-        <option value="2">Binário</option>
-        <option value="8">Octal</option>
-        <option value="10" selected>Decimal</option>
-        <option value="16">Hexadecimal</option>
-      </select>
-      
-      <label for="base-saida">BASE DE SAÍDA:</label>
-      <select name="base-saida" id="base-saida">
-        <option value="2">Binário</option>
-        <option value="8">Octal</option>
-        <option value="10" selected>Decimal</option>
-        <option value="16">Hexadecimal</option>
-      </select>
+        <select name="base-entrada" id="base-entrada">
+          <option value="2">Binário</option>
+          <option value="8">Octal</option>
+          <option value="10" selected>Decimal</option>
+          <option value="16">Hexadecimal</option>
+        </select>
 
-    </div>
+        <label for="base-saida">BASE DE SAÍDA:</label>
+        <select name="base-saida" id="base-saida">
+          <option value="2">Binário</option>
+          <option value="8">Octal</option>
+          <option value="10" selected>Decimal</option>
+          <option value="16">Hexadecimal</option>
+        </select>
+      </div>
 
       <div class="output-group">
         <label>RESULTADO:</label>
@@ -46,6 +42,15 @@
         </div>
       </div>
     </div>
+
+    <footer>
+      <p>Desenvolvido por <strong>Tiago Coutinho</strong></p>
+      <div class="links">
+        <a href="https://github.com/TiagoCoutinho3" target="_blank">GitHub</a>
+        <a href="#" target="_blank">Portfólio</a>
+      </div>
+    </footer>
+
     <script src="script.js"></script>
   </body>
 </html>
