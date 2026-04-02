@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Conversor de Bases Numéricas</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="input-group">
+        <label for="valor-entrada">Digite o valor:</label>
+        <input type="text" id="valor-entrada" autocomplete="off" />
+      </div>
+
+      <select name="base-entrada" id="base-entrada">
+        <option value="2">Binário</option>
+        <option value="8">Octal</option>
+        <option value="10" selected>Decimal</option>
+        <option value="16">Hexadecimal</option>
+      </select>
+
+      <select name="base-saida" id="base-saida">
+        <option value="2">Binário</option>
+        <option value="8">Octal</option>
+        <option value="10" selected>Decimal</option>
+        <option value="16">Hexadecimal</option>
+      </select>
+
+      <div class="output-group">
+        <label>Resultado:</label>
+        <div id="display-resultado">
+          <span id="valor-saida">0</span>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
