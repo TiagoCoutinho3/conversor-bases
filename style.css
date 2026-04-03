@@ -88,6 +88,13 @@ option {
     border: 1px dashed #bb86fc;
 }
 
+#valor-saida {
+    word-wrap: break-word;
+    word-break: break-all;
+    display: block;             
+    max-width: 100%;
+}
+
 footer {
     position: absolute;
     bottom: 10px;
