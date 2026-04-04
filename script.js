@@ -4,29 +4,63 @@ const baseSaida = document.getElementById("base-saida");
 const resultado = document.getElementById("valor-saida");
 
 function converter() {
-  let valor = entrada.value;
+    let valorOriginal = entrada.value.trim();
+    let deBase = parseInt(baseEntrada.value);
+    let paraBase = parseInt(baseSaida.value);
 
-  let deBase = parseInt(baseEntrada.value);
-  let paraBase = parseInt(baseSaida.value);
+    if (valorOriginal === "") {
+        resultado.innerText = "0";
+        return;
+    }
 
-  let decimal = parseInt(valor, deBase);
+    let regexBase;
+    if (deBase === 2) regexBase = /^[01.]+$/;
+    else if (deBase === 8) regexBase = /^[0-7.]+$/;
+    else if (deBase === 10) regexBase = /^[0-9.,]+$/;
+    else if (deBase === 16) regexBase = /^[0-9a-fA-F.]+$/;
 
-  if (isNaN(decimal)) {
-    resultado.innerText = "Valor inválido";
-    return;
-  }
+    if (!regexBase.test(valorOriginal)) {
+        resultado.innerText = "Erro: Caractere inválido para a base " + deBase;
+        return;
+    }
 
-  if (deBase == paraBase) {
-    resultado.innerText = valor;
-    return;
-  }
+    let valorParaCalculo = valorOriginal.replace(",", ".");
 
-  let valorConvertido = decimal.toString(paraBase).toUpperCase();
+    if (deBase === paraBase) {
+        resultado.innerText = valorOriginal;
+        return;
+    }
 
-  resultado.innerText = valorConvertido;
+    let decimal;
+    if (deBase === 10) {
+        decimal = parseFloat(valorParaCalculo);
+    } else {
+        decimal = parseInt(valorParaCalculo, deBase);
+    }
+
+    if (isNaN(decimal)) {
+        resultado.innerText = "Erro de conversão";
+        return;
+    }
+
+    if (paraBase === 10) {
+        resultado.innerText = decimal.toLocaleString('pt-BR', { maximumFractionDigits: 4 });
+    } else {
+        resultado.innerText = Math.floor(decimal).toString(paraBase).toUpperCase();
+    }
 }
 
-entrada.addEventListener("input", converter);
+function validarBases(event) {
+    if (baseEntrada.value === baseSaida.value) {
+        if (event.target === baseEntrada) {
+            baseSaida.value = (baseEntrada.value === "10") ? "2" : "10";
+        } else {
+            baseEntrada.value = (baseSaida.value === "10") ? "2" : "10";
+        }
+    }
+    converter();
+}
 
-baseEntrada.addEventListener("change", converter);
-baseSaida.addEventListener("change", converter);
+entrada.addEventListener('input', converter);
+baseEntrada.addEventListener('change', validarBases);
+baseSaida.addEventListener('change', validarBases);
