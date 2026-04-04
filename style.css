@@ -93,6 +93,8 @@ option {
     word-break: break-all;
     display: block;             
     max-width: 100%;
+    white-space: normal;
+    word-break: keep-all;
 }
 
 footer {
