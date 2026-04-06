@@ -8,7 +8,7 @@ const resultado = document.getElementById("valor-saida");
 
 
 
-const DIGIT_REGEX = {
+ const DIGIT_REGEX = {
 
     2: /^[01]*$/,
 
