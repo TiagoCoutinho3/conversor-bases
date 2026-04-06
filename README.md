@@ -13,4 +13,4 @@ Você pode testar o projeto online aqui: [https://github.com/TiagoCoutinho3/conv
 ## 💻 Tecnologias
 - JavaScript (ES6+)
 - CSS3
-- HTML5
+- HTML5 
