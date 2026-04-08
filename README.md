@@ -3,7 +3,7 @@
 Projeto desenvolvido para consolidar conhecimentos de lógica de programação e sistemas de computação.
 
 ## 🚀 Demonstração
-Você pode testar o projeto online aqui: [https://github.com/TiagoCoutinho3/conversor-bases]
+Você pode testar o projeto online aqui: [https://tiagocoutinho3.github.io/conversor-bases/]
 
 ## 🛠️ Funcionalidades
 - **Inteligência de Base:** O sistema impede que as bases de entrada e saída sejam iguais.
