@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Conversor de Bases Numéricas</title>
-  <link rel="icon" type="image/svg+xml" href="public/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href="public/favicon.svg" />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -41,8 +41,11 @@
       <div class="output-group">
         <label>RESULTADO:</label>
         <div id="display-resultado">
-          <span id="valor-saida">0</span>
+          <span id="valor-saida"></span>
         </div>
+        <button id="copiar-resultado" class="hidden" type="button">
+          Copiar resultado
+        </button>
       </div>
     </div>
 
@@ -50,10 +53,12 @@
       <p>Desenvolvido por <strong>Tiago Coutinho</strong></p>
       <div class="links">
         <a href="https://github.com/TiagoCoutinho3" target="_blank">GitHub</a>
-        <a href="https://portfolio-tiago-coutinho.vercel.app/" target="_blank">Portfólio</a>
+        <a href="https://portfolio-tiago-coutinho.vercel.app/" target="_blank"
+          >Portfólio</a
+        >
       </div>
     </footer>
 
-    <script src="script.js"> </script>
+    <script src="script.js"></script>
   </body>
 </html>
